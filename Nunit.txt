@@ -1,0 +1,2 @@
+Nunit is a unit testing framework for all .Net languages.Initially ported from Junit.
+It is written entirely in C# and has been completely redesigned to take advantage of many .NET language features for example custom attributes and other reflection related capabilities.
