@@ -48,12 +48,12 @@ namespace SeleniumFirst
             SeleniumSetMethods.Click(driver, "Save", "Name");
         }
 
-        [Test]
+     /*   [Test]
         public void NextTest()
         {
             Console.WriteLine("Executing next Test method");
         }
-
+*/
         [TearDown]
         public void CleanUp()
         {
