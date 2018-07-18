@@ -1,2 +1,67 @@
 Nunit is a unit testing framework for all .Net languages.Initially ported from Junit.
 It is written entirely in C# and has been completely redesigned to take advantage of many .NET language features for example custom attributes and other reflection related capabilities.
+
+1-writing test method using Nunit.
+Created three separate methods for Initialising, Executing a test(can have many tests) and Clean up method.
+ class Program
+    {
+       
+        //create reference for the browser and set it as a global variable
+        IWebDriver driver = new ChromeDriver();
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            
+        }
+
+        [SetUp]
+        public void Initialize()
+        {
+            //navigate to Google Page
+            driver.Navigate().GoToUrl("https://www.google.com");
+
+            //maximize window
+            driver.Manage().Window.Maximize();
+
+            Console.WriteLine("Opened URL");
+
+        }
+
+        [Test]
+        public void ExecuteTest()
+        {
+            //Find the search text Box element
+            IWebElement element = driver.FindElement(By.Name("q"));
+
+            //perform ops by sending value to the text box
+            element.SendKeys("execute automation");
+
+            Console.WriteLine("Executed Test");
+
+        }
+
+        [Test]
+        public void NextTest()
+        {
+            Console.WriteLine("Executing next Test method");
+        }
+
+        [TearDown]
+        public void CleanUp()
+        {
+            //close window
+            driver.Close();
+
+            Console.WriteLine("Closed the browser");
+
+        }
+    }
+}
+
+
+2-Creating custom methods for Selenium.
+Creating custom method of controls to set values in them like Text box, Drop Down box, Check box etc.
+
+Instead of looking for an element in DOM(web Page) through Selenium WebDriver.Find Element method we will create a custom method in a separate class called SeleniumSetMethods.cs.
+Example:EnterText(element,value,type)

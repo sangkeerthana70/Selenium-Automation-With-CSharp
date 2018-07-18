@@ -17,7 +17,7 @@ namespace SeleniumFirst
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
             
         }
 
@@ -25,7 +25,7 @@ namespace SeleniumFirst
         public void Initialize()
         {
             //navigate to Google Page
-            driver.Navigate().GoToUrl("https://www.google.com");
+            driver.Navigate().GoToUrl("https://http://executeautomation.com/demosite/Login.html/UserName=&Password=&Login=Login");
 
             //maximize window
             driver.Manage().Window.Maximize();
@@ -37,7 +37,7 @@ namespace SeleniumFirst
         [Test]
         public void ExecuteTest()
         {
-            //Find the search text Box element
+            //Find the search text Box element of the webpage
             IWebElement element = driver.FindElement(By.Name("q"));
 
             //perform ops
