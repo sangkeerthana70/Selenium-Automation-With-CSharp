@@ -25,7 +25,7 @@ namespace SeleniumFirst
         public void Initialize()
         {
             //navigate to Google Page
-            driver.Navigate().GoToUrl("https://http://executeautomation.com/demosite/Login.html/UserName=&Password=&Login=Login");
+            driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
 
             //maximize window
             driver.Manage().Window.Maximize();
@@ -37,14 +37,15 @@ namespace SeleniumFirst
         [Test]
         public void ExecuteTest()
         {
-            //Find the search text Box element of the webpage
-            IWebElement element = driver.FindElement(By.Name("q"));
-
-            //perform ops
-            element.SendKeys("execute automation");
-
+            //select the title by calling the SelectDropDown method in SeleniumSetMethods class
+            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
             Console.WriteLine("Executed Test");
 
+            //select the Initial from the Text Box
+            SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
+
+            //click
+            SeleniumSetMethods.Click(driver, "Save", "Name");
         }
 
         [Test]
