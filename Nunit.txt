@@ -63,9 +63,16 @@ Created three separate methods for Initialising, Executing a test(can have many 
 2-Creating custom methods for Selenium.
 Creating custom method of controls to \\set\\ values into the control like Text box, Drop Down box, Check box etc.
 
-Part-1
+Part-1  Video-5
 Instead of looking for an element in DOM(web Page) through Selenium WebDriver.Find Element method we will create a custom method in a separate class called SeleniumSetMethods.cs.
 Example:EnterText(element,value,type)
 
-Part-2
+Part-2 Video-6
 Create Custom methods of controls to \\Get\\ the values into the control like Text Box, Drop down box and Check box etc.
+
+Video-7
+Refactoring Custom methods for control libraries.
+Objective 
+Reduce parameters supplied to the Custom methods.
+Use Strongly typed parameters.
+Make the method more reusable.

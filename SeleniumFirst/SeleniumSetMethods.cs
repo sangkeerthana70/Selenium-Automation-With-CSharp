@@ -27,7 +27,7 @@ namespace SeleniumFirst
         //selecting a dropdown control
         public static void SelectDropDown(IWebDriver driver, string element, string value, string elementype)
         {
-            if (elementype == "ID")
+            if (elementype == "Id")
                 new SelectElement(driver.FindElement(By.Id(element))).SelectByText(value);
             if (elementype == "Name")
                 new SelectElement(driver.FindElement(By.Name(element))).SelectByText(value);

@@ -44,7 +44,7 @@ namespace SeleniumFirst
             //select the Initial from the Text Box
             SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
 
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetText(driver, "TitleId", "Id"));
+            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDropDownList(driver, "TitleId", "Id"));
             Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
             //click
             SeleniumSetMethods.Click(driver, "Save", "Name");
