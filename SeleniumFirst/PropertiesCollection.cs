@@ -7,6 +7,15 @@ using System.Threading.Tasks;
 
 namespace SeleniumFirst
 {
+
+    enum PropertyType
+    {
+        Id,
+        Name,
+        LinkText,
+        CssName,
+        ClassName
+    }
     class PropertiesCollection
     {
         //auto-implemented Property
