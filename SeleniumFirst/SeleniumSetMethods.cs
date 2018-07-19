@@ -25,11 +25,11 @@ namespace SeleniumFirst
         }
 
         //selecting a dropdown control
-        public static void SelectDropDown(string element, string value, PropertyType elementype)
+        public static void SelectDropDown(string element, string value, PropertyType elementtype)
         {
-            if (elementype == PropertyType.Id)
+            if (elementtype == PropertyType.Id)
                 new SelectElement(PropertiesCollection.driver.FindElement(By.Id(element))).SelectByText(value);
-            if (elementype == PropertyType.Name)
+            if (elementtype == PropertyType.Name)
                 new SelectElement(PropertiesCollection.driver.FindElement(By.Name(element))).SelectByText(value);
         }
     }
