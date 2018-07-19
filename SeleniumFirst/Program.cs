@@ -11,9 +11,9 @@ namespace SeleniumFirst
 {
     class Program
     {
-       
+       /*
         //create reference for the browser and set it as a global variable
-        IWebDriver driver = new ChromeDriver();
+        IWebPropertiesCollection.driver PropertiesCollection.driver = new ChromePropertiesCollection.driver();*/
 
         static void Main(string[] args)
         {
@@ -24,11 +24,15 @@ namespace SeleniumFirst
         [SetUp]
         public void Initialize()
         {
+
+            //initialize the browser by creating an instance of the chrome PropertiesCollection.driver
+            PropertiesCollection.driver = new ChromeDriver();
+
             //navigate to Google Page
-            driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
+            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
 
             //maximize window
-            driver.Manage().Window.Maximize();
+            PropertiesCollection.driver.Manage().Window.Maximize();
 
             Console.WriteLine("Opened URL");
 
@@ -38,16 +42,16 @@ namespace SeleniumFirst
         public void ExecuteTest()
         {
             //select the title by calling the SelectDropDown method in SeleniumSetMethods class
-            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
+            SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", "Id");
             Console.WriteLine("Executed Test");
 
             //select the Initial from the Text Box
-            SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
+            SeleniumSetMethods.EnterText("Initial", "executeautomation", "Name");
 
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDropDownList(driver, "TitleId", "Id"));
-            Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
+            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDropDownList("TitleId", "Id"));
+            Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText("Initial", "Name"));
             //click
-            SeleniumSetMethods.Click(driver, "Save", "Name");
+            SeleniumSetMethods.Click("Save", "Name");
         }
 
      /*   [Test]
@@ -60,7 +64,7 @@ namespace SeleniumFirst
         public void CleanUp()
         {
             //close window
-            driver.Close();
+            PropertiesCollection.driver.Close();
 
             Console.WriteLine("Closed the browser");
 
