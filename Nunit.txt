@@ -76,3 +76,26 @@ Objective
 Reduce parameters supplied to the Custom methods.
 Use Strongly typed parameters.
 Make the method more reusable.
+
+Procedure
+Refactoring in the video  reduced  the parameters supplied to the methods in the Set and Get classes.
+We created a separate class called Properties collection class and created a reference for the chrome browser. We then removed the IWebDriver parameter in all the methods in each class.
+The element type parameter was made as a strongly typed value.
+We created a enum in the same Properties collection class referring the PropertyType.value like 
+        Id,
+        Name,
+        LinkText,
+        CssName,
+        ClassName 
+By refactoring the custom methods(in the Set and Get methods)they are more reusable since they can be called anywhere anytime.
+
+Video-8
+Working with Page Object model in Selenium C#.
+POM
+POM is a design pattern where Object identification is in a separate class and operation in a separate class files.
+
+We create a separate class called EAPageObject.cs where each element is defined as property. Then the page is instantiated and some operations are performed on its properties.
+
+page.txtInitial.SendKeys("executeautomation");
+page.btnSave.Click();
+The Custom methods in the Program.cs is totally replaced by few lines of code.

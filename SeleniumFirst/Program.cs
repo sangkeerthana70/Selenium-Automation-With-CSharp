@@ -13,7 +13,7 @@ namespace SeleniumFirst
     {
        /*
         //create reference for the browser and set it as a global variable
-        IWebPropertiesCollection.driver PropertiesCollection.driver = new ChromePropertiesCollection.driver();*/
+        IWebdriver driver = new Chromedriver();*/
 
         static void Main(string[] args)
         {
@@ -41,17 +41,25 @@ namespace SeleniumFirst
         [Test]
         public void ExecuteTest()
         {
-            //select the title by calling the SelectDropDown method in SeleniumSetMethods class
-            SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", PropertyType.Id);
-            Console.WriteLine("Executed Test");
+            //    //select the title by calling the SelectDropDown method in SeleniumSetMethods class
+            //    SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", PropertyType.Id);
+            //    Console.WriteLine("Executed Test");
 
-            //select the Initial from the Text Box
-            SeleniumSetMethods.EnterText("Initial", "executeautomation", PropertyType.Name);
+            //    //select the Initial from the Text Box
+            //    SeleniumSetMethods.EnterText("Initial", "executeautomation", PropertyType.Name);
 
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDropDownList("TitleId", PropertyType.Id));
-            Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText("Initial", PropertyType.Name));
-            //click
-            SeleniumSetMethods.Click("Save", PropertyType.Name);
+            //    Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetTextFromDropDownList("TitleId", PropertyType.Id));
+            //    Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText("Initial", PropertyType.Name));
+            //    //click
+            //    SeleniumSetMethods.Click("Save", PropertyType.Name);
+
+
+            //Initialize the page by calling its reference
+            EAPageObject page = new EAPageObject();
+
+            page.txtInitial.SendKeys("executeautomation");
+            page.btnSave.Click();
+            Console.WriteLine("Executed Page Object Model");
         }
 
      /*   [Test]
