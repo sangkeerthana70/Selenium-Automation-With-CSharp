@@ -10,7 +10,7 @@ namespace SeleniumFirst
 {
     class LoginPageObject
     {
-
+        [Obsolete("Use newMethod instead", false)]//modify the code to use the Obsolete atrribute as PageFactory was deprecated
         //initialize page using constructor
         public LoginPageObject()
         {
@@ -19,7 +19,7 @@ namespace SeleniumFirst
 
 
         //identify the name element with value as Username
-        [FindsBy(How = How.Name, Using = "Username")]
+        [FindsBy(How = How.Name, Using = "UserName")]
         public IWebElement txtUserName { get; set; }
         //identify the name element with value as Password
         [FindsBy(How = How.Name, Using = "Password")]

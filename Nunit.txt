@@ -112,4 +112,103 @@ Added the login operation as a method inside the LoginPageObject.cs file rather 
 Step-3
 Once we return the EAPageObject it will initialize all the page objects and return the instance of the EA page from the login itself. 
 
+
+
+6:34
+Should I Specialize in C#?
+Bulldog Mindset
+57K views
+
+
+24:06
+How to crack Selenium Interview For Experience
+Bhanu Pratap
+172K views
+
+
+9:10
+I Adopted Rich People’s Habits, See How My Life Changed
+BRIGHT SIDE
+3.6M views
+
+
+7:34
+Object-oriented Programming in 7 minutes
+Programming with Mosh
+73K views
+
+
+10:34
+Data Driven Testing in Selenium with C# -- Part 12 (Selenium automation with C#)
+Execute Automation
+32K views
+
+
+8:54
+Part 1 - An Introduction to Docker
+Execute Automation
+48K views
+
+
+15:56
+Why I'm Going Back to College - BS Software Development | Getting My EDUCMACATION!!! | Ask a Dev
+Dylan Israel
+6.7K views
+
+
+10:34
+1. Selenium Tutorial 2018 using C# and Visual Studio 2017 - Set up
+TheSpearman
+467 views
+
+
+16:42
+Refactoring Custom methods of control libraries -- Part 7(Selenium automation with C#)
+Execute Automation
+36K views
+
+
+11:14
+Explicit and Implicit Wait in Selenium WebDriver (Selenium Titbits Series)
+Execute Automation
+22K views
+
+
+13:25
+Are You Too Old to Learn to Code? | Ask a Dev
+Dylan Israel
+7.5K views
+
+Part 29 - Extent Reporting with Specflow and Selenium C# - Understanding ExtentReport (Series)
+Execute Automation
+2.6K views
+
+Creating Custom methods for Controls in Selenium (Part 1) -- Part 5 (Selenium automation with C#)
+Execute Automation
+79K views
+
+Extension methods for Custom methods (Advanced) -- Part11 (Selenium with C#)
+Execute Automation
+18K views
+
+How to Become a Great Self-taught Developer? | Ask a Dev
+Dylan Israel
+38K views
+
+Part 30 - Extent Reporting with Specflow and Selenium C# - Generate report dynamically (Series)
+Execute Automation
+1.1K views
+
+Referencing Selenium C# in Visual Studio -- Part 2 (Selenium automation with C#)
+Execute Automation
+99K views
+
+Page Object Model in Selenium Webdriver Step by Step Guide
+Mukesh otwani
+219K views
+PageFactory no longer works. Fixed both EAPageObject and LoginPageObject class files to include [Obsolete] attribute instead.
+Selenium with C# Breaking Changes - PageFactory class will be deprecated in future release.
+https://www.youtube.com/watch?v=jgKgbVcQ-1U
+
+
 Included more operation in the Program.cs to enter values in the 

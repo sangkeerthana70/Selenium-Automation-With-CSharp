@@ -11,10 +11,12 @@ namespace SeleniumFirst
     class EAPageObject
     {
 
+        [Obsolete("Use newMethod instead", false)]//modify the code to use the Obsolete atrribute as PageFactory was deprecated
         //initialize page object using constructor
         public EAPageObject()
         {
-            PageFactory.InitElements(PropertiesCollection.driver, this);
+            
+        PageFactory.InitElements(PropertiesCollection.driver, this);
         }
         //identify the dropdown box element by id value as TitleId
         [FindsBy(How = How.Id, Using = "TitleId")]

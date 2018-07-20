@@ -29,9 +29,9 @@ namespace SeleniumFirst
             PropertiesCollection.driver = new ChromeDriver();
 
             //navigate to Google Page
-            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/login.html");
+            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/Login.html");
 
-            //maximize window
+            //maximize window                                
             PropertiesCollection.driver.Manage().Window.Maximize();
 
             Console.WriteLine("Opened URL");
