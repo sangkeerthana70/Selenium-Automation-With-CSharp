@@ -11,7 +11,7 @@ namespace SeleniumFirst
     class EAPageObject
     {
 
-        //initialize objects
+        //initialize page object using constructor
         public EAPageObject()
         {
             PageFactory.InitElements(PropertiesCollection.driver, this);
@@ -24,8 +24,24 @@ namespace SeleniumFirst
         [FindsBy(How = How.Id, Using = "Initial")]
         public IWebElement txtInitial { get; set; }
 
+        [FindsBy(How = How.Name, Using = "FirstName")]
+        public IWebElement txtFirstName { get; set; }
+
+        [FindsBy(How = How.Name, Using = "MiddleName")]
+        public IWebElement txtMiddleName { get; set; }
+
         //identify the button element by the name value as Save
         [FindsBy(How = How.Name, Using = "Save")]
         public IWebElement btnSave { get; set; }
+
+        //method to do operation on the EA page once the Login is successfull
+        public void FillUserForm(string initial, string firstName, string middleName)
+        {
+            txtInitial.SendKeys(initial);
+            txtFirstName.SendKeys(firstName);
+            txtMiddleName.SendKeys(middleName);
+            btnSave.Click();
+
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace SeleniumFirst
             PropertiesCollection.driver = new ChromeDriver();
 
             //navigate to Google Page
-            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
+            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/login.html");
 
             //maximize window
             PropertiesCollection.driver.Manage().Window.Maximize();
@@ -54,20 +54,26 @@ namespace SeleniumFirst
             //    SeleniumSetMethods.Click("Save", PropertyType.Name);
 
 
-            //Initialize the page by calling its reference
-            EAPageObject page = new EAPageObject();
 
-            page.txtInitial.SendKeys("executeautomation");
-            page.btnSave.Click();
-            Console.WriteLine("Executed Page Object Model");
+            //login to application by creating an instance  for the LoginPageObject.
+            LoginPageObject pageLogin = new LoginPageObject();      
+            EAPageObject pageEA = pageLogin.Login("Anuradha", "Sengalvarayan");
+
+            pageEA.FillUserForm("SA", "Anu", "Senthil");
+            Console.WriteLine("Executed LoginPage Object and returned EAPageObject");
+
+
+            //pageEA.txtInitial.SendKeys("executeautomation");
+            //pageEA.btnSave.Click();
+
         }
 
-     /*   [Test]
-        public void NextTest()
-        {
-            Console.WriteLine("Executing next Test method");
-        }
-*/
+        /*   [Test]
+           public void NextTest()
+           {
+               Console.WriteLine("Executing next Test method");
+           }
+   */
         [TearDown]
         public void CleanUp()
         {

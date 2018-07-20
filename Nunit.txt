@@ -94,8 +94,22 @@ Working with Page Object model in Selenium C#.
 POM
 POM is a design pattern where Object identification is in a separate class and operation in a separate class files.
 
-We create a separate class called EAPageObject.cs where each element is defined as property. Then the page is instantiated and some operations are performed on its properties.
+We create a separate class called EAPageObject.cs where each element is defined as property. 
+The objects are called in test methods where the page is instantiated into an object and some operations are performed on its properties.
 
+EAPageObject page = new EAPageObject();
 page.txtInitial.SendKeys("executeautomation");
 page.btnSave.Click();
 The Custom methods in the Program.cs is totally replaced by few lines of code.
+
+Video-9
+Page Navigation in POM.
+Step-1Created a separate class called LoginPageObject.cs to include properties of the login page. Initialized the login page using a constructor.
+
+Step-2Include the FirstName and MiddleName properties of the page model in EAPageObject.cs file.
+Added the login operation as a method inside the LoginPageObject.cs file rather than having it in Program.cs [Test] attribute. Made the Login method as a non-void one to return the EAPageObject so that we can navigate to the EA PAge once we login.
+
+Step-3
+Once we return the EAPageObject it will initialize all the page objects and return the instance of the EA page from the login itself. 
+
+Included more operation in the Program.cs to enter values in the 
