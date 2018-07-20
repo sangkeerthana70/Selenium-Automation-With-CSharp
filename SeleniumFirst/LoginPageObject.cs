@@ -32,6 +32,7 @@ namespace SeleniumFirst
         //method
         public EAPageObject Login(string userName, string password)
         {
+            /*
             //operation to enter username
             txtUserName.SendKeys(userName);
             //operation to enter password
@@ -40,7 +41,12 @@ namespace SeleniumFirst
             btnLogin.Submit();
 
             //Return the Page object 
-            return new EAPageObject();
+            return new EAPageObject();*/
+
+            //video-11 calling the extention methods of custom methods
+            txtUserName.EnterText(userName);
+            txtPassword.EnterText(password);
+            btnLogin.Clicks();
         }
 
     }

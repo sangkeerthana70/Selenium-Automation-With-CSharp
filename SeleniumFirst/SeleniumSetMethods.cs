@@ -3,10 +3,12 @@ using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumFirst
 {
-    class SeleniumSetMethods
+    public static class SeleniumSetMethods
     {
-        //generic Enter Text method to support all text box controls for the application 
-        public static void EnterText(IWebElement element, string value)
+        //generic Enter Text method to support all text box controls for the application
+        //
+        //Extended method for entering text in the control by supplying element and values to be set
+        public static void EnterText(this IWebElement element, string value)
         {
             //if (elementtype == PropertyType.Id)
             //    PropertiesCollection.driver.FindElement(By.Id(element)).SendKeys(value);
@@ -17,7 +19,8 @@ namespace SeleniumFirst
         }
 
         //custom method to perform a click operation on button, checkbox, option etc
-        public static void Click(IWebElement element)
+        //Extended method for clicking on a button, checkbox, options etc.
+        public static void Clicks(this IWebElement element)
         {
             //if (elementtype == PropertyType.Id)
             //    PropertiesCollection.driver.FindElement(By.Id(element)).Click();
@@ -28,7 +31,8 @@ namespace SeleniumFirst
         }
 
         //selecting a dropdown control
-        public static void SelectDropDown(IWebElement element, string value)
+        //extended method to select a dropdown control
+        public static void SelectDropDown(this IWebElement element, string value)
         {
             
                 new SelectElement(element).SelectByText(value);

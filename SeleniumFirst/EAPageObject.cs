@@ -44,10 +44,19 @@ namespace SeleniumFirst
             //txtMiddleName.SendKeys(middleName);
             //btnSave.Click();
 
-            SeleniumSetMethods.EnterText(txtInitial, initial);
-            SeleniumSetMethods.EnterText(txtFirstName, firstName);
-            SeleniumSetMethods.EnterText(txtMiddleName, middleName);
-            SeleniumSetMethods.Click(btnSave);
+
+            //video-10 customised library methods to be directly called from the Page Object 
+            //call the class with a static method and pass in a value.
+            //SeleniumSetMethods.EnterText(txtInitial, initial);
+            //SeleniumSetMethods.EnterText(txtFirstName, firstName);
+            //SeleniumSetMethods.EnterText(txtMiddleName, middleName);
+            //SeleniumSetMethods.Click(btnSave);
+
+            //video-11 calling the extention methods of custom methods
+            txtInitial.EnterText(initial);
+            txtFirstName.EnterText(firstName);
+            txtMiddleName.EnterText(middleName);
+            btnSave.Clicks();
 
 
         }

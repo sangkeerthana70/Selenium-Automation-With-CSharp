@@ -127,8 +127,13 @@ Refer this video for more documentation
 Selenium with C# Breaking Changes - PageFactory class will be deprecated in future release.
 https://www.youtube.com/watch?v=jgKgbVcQ-1U
 
-Video-10 Customising Custom Library methods.
+Video-10 Part-10 Customising Custom Library methods.
 Change the parameters supplied to the Custom Set and Get methods to delete the string element and string elementtype as these two values are already in the POM(EAPageObject.cs).
 These custom methods are now supplied with IWebElement element and string values as the only parameters to set and get the values in these methods. 
 After getting or setting these values we can directly call these custom methods from the EAPageObject FillUserForm method.
+
+Video-11 Part-11 Extention methods for custom methods
+Extention methods enable you to add methods to the existing type without creating a new derived type, recompiling or otherwise modifying the original type.
+Extention methods are a special kind of static methods but they are called as if they were instance methods on the Extention type.
+Extention methods paved the way for Linq and entity framework.
 
