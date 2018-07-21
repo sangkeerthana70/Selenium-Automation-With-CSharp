@@ -133,7 +133,21 @@ These custom methods are now supplied with IWebElement element and string values
 After getting or setting these values we can directly call these custom methods from the EAPageObject FillUserForm method.
 
 Video-11 Part-11 Extention methods for custom methods
+Extension method is a feature of the C# language and not the Selenium tool.
 Extention methods enable you to add methods to the existing type without creating a new derived type, recompiling or otherwise modifying the original type.
 Extention methods are a special kind of static methods but they are called as if they were instance methods on the Extention type.
 Extention methods paved the way for Linq and entity framework.
 
+Methods are already available within the IWebElement(that we use in the POM). They are already compiled in IWebElement and available in the web driver DLL. If we want to add a custom method to the type that is available in the WebDriver's DLL file, MIcrosoft has introduced some extension methods which can be used to extend the existing type and add a method to that particular type.
+Example:
+	//Extension method for entering text in the control by supplying element and values to be set
+	public static void EnterText(this IWebElement element, string value)
+	{
+		element.SendKeys(value);
+	}
+
+	In the above example this is a KEY WORD that extends the EnterText as a method to the IWebElement.
+	We do this for all the methods in the Custom Get and Set IWebElements. Also make the Custom methods as a Static class so that they can be directly use without being instantiated.
+
+
+Video-12 Part-12 Data Driven testing in Selenium with C#

@@ -39,6 +39,7 @@ namespace SeleniumFirst
         }
 
         [Test]
+        [Obsolete("Use newMethod instead", false)]
         public void ExecuteTest()
         {
             //    //select the title by calling the SelectDropDown method in SeleniumSetMethods class

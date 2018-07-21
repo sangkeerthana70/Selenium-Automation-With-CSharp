@@ -7,7 +7,7 @@ namespace SeleniumFirst
     {
         //generic Enter Text method to support all text box controls for the application
         //
-        //Extended method for entering text in the control by supplying element and values to be set
+        //Extension method for entering text in the control by supplying element and values to be set
         public static void EnterText(this IWebElement element, string value)
         {
             //if (elementtype == PropertyType.Id)
@@ -19,7 +19,7 @@ namespace SeleniumFirst
         }
 
         //custom method to perform a click operation on button, checkbox, option etc
-        //Extended method for clicking on a button, checkbox, options etc.
+        //Extension method for clicking on a button, checkbox, options etc.
         public static void Clicks(this IWebElement element)
         {
             //if (elementtype == PropertyType.Id)

@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace SeleniumFirst
 {
-    class SeleniumGetMethods
+    public static class SeleniumGetMethods
     {
 
         //method that returns  the string value out of the text box control
-        public static string GetText(IWebElement element)
+        public static string GetText(this IWebElement element)
         {
             //if (elementtype == PropertyType.Id)
             //    return PropertiesCollection.driver.FindElement(By.Id(element)).GetAttribute("value");
@@ -22,7 +22,7 @@ namespace SeleniumFirst
 
         }
 
-        public static string GetTextFromDropDownList(IWebElement element)
+        public static string GetTextFromDropDownList(this IWebElement element)
         {           
                 return new SelectElement(element).AllSelectedOptions.SingleOrDefault().Text;
  
